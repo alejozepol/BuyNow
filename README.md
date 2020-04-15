@@ -1,1 +1,2 @@
 # PlatziStore
+cambio comprobacion ssh
