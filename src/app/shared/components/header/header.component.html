@@ -1,1 +1,14 @@
-<p>header works!</p>
+<mat-toolbar class="header-toolbar" color="primary">
+  <h1>PlatziStore</h1>
+  <nav>
+    <a mat-button  routerLinkActive="active" routerLink="/" >Home</a>
+    <a mat-button routerLink="/products" >Products</a>
+    <a mat-button color="primary" routerLink="/contact">Cotacto</a>
+  </nav>
+</mat-toolbar>
+<button mat-raised-button>Basic</button>
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<button mat-raised-button disabled>Disabled</button>
+<a mat-raised-button routerLink=".">Link</a>
