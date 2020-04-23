@@ -23,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RouterModule
   ]
 })
 export class SharedModule { }
