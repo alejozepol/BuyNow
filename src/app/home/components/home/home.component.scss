@@ -1,0 +1,10 @@
+.Home{
+  height: 100%;
+  display: grid;
+  grid-template-areas: "banner banner banner" "col1 col2 col3";
+  grid-template-rows: 60% 40%;
+  grid-template-columns: 100%;
+}
+app-banner{
+  grid-area: banner;
+}
