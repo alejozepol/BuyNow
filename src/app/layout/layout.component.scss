@@ -1,0 +1,19 @@
+.Layout {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 10% auto 20%;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+  &__header{
+    grid-area: header;
+  }
+  &__content{
+    grid-area: main;
+    height: 100%;
+  }
+  &__footer{
+    grid-area: footer;
+    background-color: royalblue;
+  }
+
+}
