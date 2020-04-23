@@ -12,7 +12,11 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () => import ('./home/home-routing.module').then(m => m.HomeRoutingModule),
-      }
+      },
+      {
+        path: 'products',
+        loadChildren: () => import ('./products/products-routing.module').then(m => m.ProductsRoutingModule),
+      },
     ]
   }
 ];
