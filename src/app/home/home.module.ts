@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { HomeRoutingModule } from './home-routing.module';
+
 import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
-
-import { HomeRoutingModule } from './home-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
-    HomeComponent,
     BannerComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    MaterialModule,
   ],
-  exports: [
-  ]
 })
 export class HomeModule { }

@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  columns: string[] = [
+    'assets/img/col1.jpg',
+    'assets/img/col2.jpg',
+    'assets/img/col3.jpg',
+  ]
   constructor() { }
 
   ngOnInit(): void {

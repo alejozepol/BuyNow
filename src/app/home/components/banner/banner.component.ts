@@ -11,9 +11,9 @@ export class BannerComponent implements OnInit {
   constructor() {
   }
   imagens: string[] = [
-    'assets/img/img1',
-    'assets/img/img2',
-    'assets/img/img2',
+    'assets/img/img1.png',
+    'assets/img/img2.png',
+    'assets/img/img3.png',
   ];
 
   ngOnInit(): void {

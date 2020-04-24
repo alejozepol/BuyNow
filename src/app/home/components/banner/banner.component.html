@@ -1,7 +1,16 @@
 <div class="swiper-container">
   <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngfor="let img of imagens">
-        <img [src]="img" alt="imagen banner prueba">
+<!--     <div *ngFor=" let img of imagens " class="swiper-slide" >
+      <img [src]="img" alt="imagen banner prueba">
+    </div> -->
+      <div class="swiper-slide">
+        <img [src]="imagens[0]" alt="imagen banner prueba">
+      </div>
+      <div class="swiper-slide">
+        <img [src]="imagens[1]" alt="imagen banner prueba">
+      </div>
+      <div class="swiper-slide">
+        <img [src]="imagens[2]" alt="imagen banner prueba">
       </div>
   </div>
   <!-- Add Pagination -->
