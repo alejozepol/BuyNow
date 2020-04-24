@@ -1,15 +1,19 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{product.title | uppercase}}</mat-card-title>
-    <mat-card-subtitle>{{product.price | currency}}</mat-card-subtitle>
+<mat-card class="cardProduct">
+  <mat-card-header class="cardProduct__header">
+    <mat-card-title class="cardProduct__header-title">
+      {{product.title | uppercase}}
+    </mat-card-title>
+    <mat-card-subtitle class="cardProduct__header-subtitle">
+      {{product.price | currency}}
+    </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="product.image" [alt]="product.title">
+  <img mat-card-image class="cardProduct__img" [src]="product.image" [alt]="product.title">
   <mat-card-content>
-    <p>
+    <p class="cardProduct__description">
       {{product.description}}
     </p>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions class="cardProduct__action">
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>

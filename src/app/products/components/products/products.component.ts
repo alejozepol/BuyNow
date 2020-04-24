@@ -11,10 +11,8 @@ import { Product } from '../../../core/models/product.model';
 export class ProductsComponent implements OnInit {
 
   products: Product[] = [];
-  constructor(
-    private productsService: ProductsService
-  ) { 
-    this.getServiceProducts()
+  constructor(private productsService: ProductsService) {
+    this.getServiceProducts();
   }
 
   ngOnInit(): void {
@@ -22,7 +20,6 @@ export class ProductsComponent implements OnInit {
 
   getServiceProducts() {
     this.products = this.productsService.getAllproducts();
-    console.log(this.products)
   }
 
 }
