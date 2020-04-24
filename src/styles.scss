@@ -14,6 +14,7 @@
 $primary: mat-palette($mat-blue-gray, A700, A800, A600);
 $accent: mat-palette($mat-orange, A200, A100, A400);
 
+
 // The warn palette is optional (defaults to red).
 $warn: mat-palette($mat-red);
 
@@ -26,6 +27,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 
 /* You can add global styles to this file, and also import other style files */
+
 
 html,
 body {
