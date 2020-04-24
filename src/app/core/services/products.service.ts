@@ -39,14 +39,14 @@ export class ProductsService {
       id: '5',
       title: 'Stickers Logo Platzi',
       description: 'Stickers o pegatin con el logo de Platzi',
-      image: 'assets/img/pin.png',
+      image: 'assets/img/stickers1.png',
       price: 4000
     },
     {
       id: '6',
       title: 'Stickers Nunca Pares de Aprender',
       description: 'Stickers o pegatin con el slogan de Nunca Pares de Aprender',
-      image: 'assets/img/pin.png',
+      image: 'assets/img/stickers2.png',
       price: 4000
     },
   ];
