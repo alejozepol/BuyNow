@@ -1,3 +1,44 @@
 .cardProduct{
-  height: 100%;
+  position: relative;
+  height: 370px;
+  width: 90%;
+  display: grid;
+  grid-template-areas: "header" "img" "description" "action";
+  grid-template-rows: auto 50% auto 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  &__favorite{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+  }
+  &__header{
+    grid-area: header;
+  }
+  &__img{
+    grid-area: img;
+    width: 80%;
+    margin: 0%;
+    justify-self: center;
+  }
+  &__description{
+    grid-area: description;
+    justify-self: center;
+    margin: 0;
+    width: 90%;
+  }
+  &__action{
+    grid-area: action;
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    & > button{
+      width: 100%;
+      height: 91%;
+    }
+    
+  }
 }

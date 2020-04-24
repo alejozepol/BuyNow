@@ -1,4 +1,10 @@
 <mat-card class="cardProduct">
+<!--   <button mat-icon-button color="warn" aria-label="Favorite" class="cardProduct__favorite">
+    <mat-icon>favorite</mat-icon>
+  </button> -->
+  <button mat-icon-button color="warn" aria-label="Favorite" class="cardProduct__favorite">
+    <mat-icon>favorite_border</mat-icon>
+  </button>
   <mat-card-header class="cardProduct__header">
     <mat-card-title class="cardProduct__header-title">
       {{product.title | uppercase}}
@@ -8,13 +14,10 @@
     </mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image class="cardProduct__img" [src]="product.image" [alt]="product.title">
-  <mat-card-content>
-    <p class="cardProduct__description">
-      {{product.description}}
-    </p>
+  <mat-card-content class="cardProduct__description">
+     <p>{{product.description}}</p> 
   </mat-card-content>
   <mat-card-actions class="cardProduct__action">
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-flat-button color="accent">Agregar</button>
   </mat-card-actions>
 </mat-card>
