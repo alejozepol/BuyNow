@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -13,7 +13,6 @@ import { MatBadgeModule } from '@angular/material/badge';
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -22,7 +21,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatBadgeModule
   ],
   exports: [
-    BrowserAnimationsModule,
+    CommonModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
