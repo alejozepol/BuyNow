@@ -10,6 +10,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 /* subModule */
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     SharedModule,
     BrowserAnimationsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
