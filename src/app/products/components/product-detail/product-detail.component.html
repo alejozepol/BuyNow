@@ -1,0 +1,15 @@
+<mat-card class="ProductoDetail">
+  <img class="ProductoDetail__img" [src]='product.image'>
+  <mat-card class="ProductoDetail__content">
+    <div class="ProductoDetail__content-header">
+      <h2 class="ProductoDetail__content-header-title">
+        {{product.title}}
+      </h2>
+      <h3 class="ProductoDetail__content-header-subtitle">{{product.price}}</h3>
+    </div>
+    <p class="ProductoDetail__content-description">{{product.description}}</p>
+    <div class="ProductoDetail__content-action">
+      <button mat-flat-button color="accent">Agregar</button>
+    </div>
+  </mat-card>
+</mat-card>

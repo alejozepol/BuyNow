@@ -5,7 +5,10 @@
   <button mat-icon-button color="warn" aria-label="Favorite" class="cardProduct__favorite">
     <mat-icon>favorite_border</mat-icon>
   </button>
-  <mat-card-header class="cardProduct__header">
+  <mat-card-header
+    class="cardProduct__header"
+    [routerLink]="['/products', product.id]"
+    >
     <mat-card-title class="cardProduct__header-title">
       {{product.title | uppercase}}
     </mat-card-title>
@@ -13,8 +16,17 @@
       {{product.price | currency}}
     </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image class="cardProduct__img" [src]="product.image" [alt]="product.title">
-  <mat-card-content class="cardProduct__description">
+  <img
+    [routerLink]="['/products', product.id]"
+    mat-card-image
+    class="cardProduct__img"
+    [src]="product.image"
+    [alt]="product.title"
+  >
+  <mat-card-content
+    [routerLink]="['/products', product.id]"
+    class="cardProduct__description"
+  >
      <p>{{product.description}}</p> 
   </mat-card-content>
   <mat-card-actions class="cardProduct__action">

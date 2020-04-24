@@ -1,0 +1,37 @@
+@import '../../../../styles.scss';
+
+.ProductoDetail {
+  width: 80vw;
+  height: 60vh;
+  display: grid;
+  grid-template-areas: "img content";
+  grid-template-columns: 60% 40%;
+  &__content {
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: "header" "description" "action";
+    &-header {
+      grid-area: header;
+      &-title {
+        margin: 0;
+      }
+    }
+    &-description {
+      grid-area: description;
+    }
+    &-action {
+      grid-area: action;
+      align-self: center;
+      &>button {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__img {
+    grid-area: img;
+    justify-self: center;
+    height: 100%;
+  }
+}
