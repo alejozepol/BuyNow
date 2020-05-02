@@ -1,0 +1,34 @@
+@import '../var';
+
+//  ████████╗██╗···██╗██████╗··██████╗·
+//  ╚══██╔══╝╚██╗·██╔╝██╔══██╗██╔═══██╗
+//  ···██║····╚████╔╝·██████╔╝██║···██║
+//  ···██║·····╚██╔╝··██╔═══╝·██║···██║
+//  ···██║······██║···██║·····╚██████╔╝
+//  ···╚═╝······╚═╝···╚═╝······╚═════╝·
+
+@mixin font-regular {
+  font-weight: $regular;
+}
+@mixin font-bold {
+  font-weight: $semiBold;
+}
+
+
+@each $header, $size in 
+(h1: $h1, h2: $h2, h3:$h3, h4:$h4, h5:$h5, h6:$h6 ) {
+  #{$header} {
+        font-size: $size;
+        margin: 0;
+        @include font-bold;
+  }
+};
+
+@each $header, $size in 
+(p:$p, small:$small ) {
+  #{$header} {
+        font-size: $size;
+        margin: 0;
+        @include font-regular;
+  }
+};

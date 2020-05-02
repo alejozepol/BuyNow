@@ -1,0 +1,20 @@
+@import '../var';
+
+
+@each $color, $value in (
+  primary: $primary,
+  segundary: $segundary,
+  light: $light,
+  accent: $accent,
+  warning: $warning,
+  "white": $white,
+  desactive: $desactive,
+  dark: $dark) {
+  .#{$color} {
+    color: $value !important
+  }
+  .bg-#{$color} {
+    background-color: $value !important
+  }
+};
+
