@@ -13,7 +13,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
   declarations: [
     ProductsComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
   ],
   imports: [
     CommonModule,

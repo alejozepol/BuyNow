@@ -12,7 +12,9 @@ export class ProductsService {
       title: 'Camiseta',
       description: 'Camiseta con el logo de platzi',
       image: 'assets/img/camiseta.png',
-      price: 20000
+      price: 20000,
+      discount: true,
+      percentaje: 20
     },
     {
       id: '2',
@@ -26,7 +28,9 @@ export class ProductsService {
       title: 'Mug',
       description: 'Increible mug blanco con el logo de platzi',
       image: 'assets/img/mug.png',
-      price: 16000
+      price: 16000,
+      discount: true,
+      percentaje: 25
     },
     {
       id: '4',
@@ -40,10 +44,60 @@ export class ProductsService {
       title: 'Stickers Logo Platzi',
       description: 'Stickers o pegatin con el logo de Platzi',
       image: 'assets/img/stickers1.png',
-      price: 4000
+      price: 4000,
+      discount: true,
+      percentaje: 25
     },
     {
       id: '6',
+      title: 'Stickers Nunca Pares de Aprender',
+      description: 'Stickers o pegatin con el slogan de Nunca Pares de Aprender',
+      image: 'assets/img/stickers2.png',
+      price: 4000
+    },
+    {
+      id: '7',
+      title: 'Camiseta',
+      description: 'Camiseta con el logo de platzi',
+      image: 'assets/img/camiseta.png',
+      price: 20000,
+      discount: true,
+      percentaje: 20
+    },
+    {
+      id: '8',
+      title: 'hoodie',
+      description: 'Cahqueta o Hoodie con el logo de platzi color azul',
+      image: 'assets/img/hoodie.png',
+      price: 35000
+    },
+    {
+      id: '9',
+      title: 'Mug',
+      description: 'Increible mug blanco con el logo de platzi',
+      image: 'assets/img/mug.png',
+      price: 16000,
+      discount: true,
+      percentaje: 25
+    },
+    {
+      id: '10',
+      title: 'Pin',
+      description: 'LLeva a Platzi junto a tu corazon y nunca pares de aprender',
+      image: 'assets/img/pin.png',
+      price: 5000
+    },
+    {
+      id: '11',
+      title: 'Stickers Logo Platzi',
+      description: 'Stickers o pegatin con el logo de Platzi',
+      image: 'assets/img/stickers1.png',
+      price: 4000,
+      discount: true,
+      percentaje: 25
+    },
+    {
+      id: '12',
       title: 'Stickers Nunca Pares de Aprender',
       description: 'Stickers o pegatin con el slogan de Nunca Pares de Aprender',
       image: 'assets/img/stickers2.png',
@@ -59,16 +113,16 @@ export class ProductsService {
   getIdProduct(id: string) {
     return this.products.find((item) => item.id === id);
   }
-  searchTitleProducts(title: string){
+  searchTitleProducts(title: string) {
     console.log(title)
     return this.products.filter((item) => item.title.toLowerCase().includes(title.toLowerCase()));
   }
 
-  createProduct(product : Product){
+  createProduct(product: Product) {
     return this.products.push(product);
   }
 
-  updateProduct(){
+  updateProduct() {
     /* pendiente por emplementar */
   }
   deleteIdProduct(id: string) {

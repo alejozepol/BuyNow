@@ -4,4 +4,6 @@ export interface Product{
   price: number;
   description: string;
   image: string;
+  discount?: boolean;
+  percentaje?: number;
 }
