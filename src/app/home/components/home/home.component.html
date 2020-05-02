@@ -1,12 +1,10 @@
 <div class="Home" >
-  <app-banner color='primary'></app-banner>
-  <div class="Home__col1">
-    <img [src]="columns[0]" alt="publicidad 1">
+  <app-banner></app-banner>
+  <app-best-products class="Home__bestProducts"></app-best-products>
+  <div class="Home__publicidad space_4_top_margin space_4_bottom_margin">
+      <img [src]="columns[0]" alt="publicidad 1">
+      <img [src]="columns[1]" alt="publicidad 2">
+      <img [src]="columns[2]" alt="publicidad 3">
   </div>
-  <div class="Home__col2">
-    <img [src]="columns[1]" alt="publicidad 2">
-  </div>
-  <div class="Home__col3">
-    <img [src]="columns[2]" alt="publicidad 3">
-  </div>
+
 </div>
