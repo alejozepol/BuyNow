@@ -1,22 +1,28 @@
-<mat-toolbar class="Header" color="primary">
+<mat-toolbar class="Header bg-primary white">
   <h1 class="Header__logo">
-    <a
-      routerLink='/'
-    >
-      PlatziStore
+    <a routerLink='/'>
+      <img src='assets/LightLogoRight.png' alt='BuyNow' />
     </a>
   </h1>
   <nav class="Header__nav">
-    <a 
-      class="Header__nav-item"
-      *ngFor="let route of routes"
-      mat-button
-      color="white"
-      [routerLink]="route.path"
+<!--     <a class="Header__nav-item" *ngFor="let route of routes" mat-button [routerLink]="route.path"
       routerLinkActive="mat-accent">
       {{route.name}}
-    </a>
+    </a> -->
+    <input class="Header__nav-search" />
   </nav>
-  <a class="Header__card" mat-icon-button color="white" routerLink="/card" routerLinkActive="mat-accent"><mat-icon matBadge="8" matBadgeColor="accent" matBadgePosition="badge">shopping_cart</mat-icon></a>
-  
+  <div class="Header__icons">
+    <a class="Header__icons-card white" mat-icon-button routerLink="/card" routerLinkActive="mat-accent">
+      <mat-icon matBadge="8" matBadgeColor="accent" matBadgePosition="badge">
+        shopping_cart
+      </mat-icon>
+    </a>
+    <a class="Header__icons-card white" mat-icon-button routerLink="/card" routerLinkActive="mat-accent">
+      <mat-icon>
+        person
+      </mat-icon>
+    </a>
+
+  </div>
+
 </mat-toolbar>

@@ -1,21 +1,28 @@
 .Header{
+  height: 100%;
+  padding: 0 8%;
   display: grid;
-  grid-template-areas: "logo nav card";
-  grid-template-columns: max-content auto min-content;
+  grid-template-areas: "logo nav icons";
+  grid-template-columns: 20% auto 20%;
   align-items: center;
   &__logo{
     grid-area: logo;
     & > a{
       text-decoration: none;
       color: inherit;
+      & > img{
+        height: 60%;
+      }
     }
   }
   &__nav{
     grid-area: nav;
     justify-self: center;
   }
-  &__card{
-    grid-area: card;
+  &__icons{
+    grid-area: icons;
+    display: flex;
+    justify-content: space-evenly;
   }
 
 }

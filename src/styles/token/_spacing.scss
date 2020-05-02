@@ -10,30 +10,30 @@
 @mixin constructor($num) {
   padding:$num;
   &_margin{
-    margin: $num;
+    margin: $num !important;
   }
   &_top{
-    padding-top: $num;
+    padding-top: $num !important;
     &_margin{
-      margin-top: $num;
+      margin-top: $num !important;
     }
   }
   &_bottom{
-    padding-top: $num;
+    padding-top: $num !important;
     &_margin{
-      margin-bottom: $num;
+      margin-bottom: $num !important;
     }
   }
   &_left{
-    padding-top: $num;
+    padding-top: $num !important;
     &_margin{
-      margin-left: $num;
+      margin-left: $num !important;
     }
   }
   &_right{
-    padding-top: $num;
+    padding-top: $num !important;
     &_margin{
-      margin-right: $num;
+      margin-right: $num !important;
     }
   }
 }
