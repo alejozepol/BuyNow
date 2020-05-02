@@ -12,3 +12,15 @@ body {
   margin: 0;
   font-family: $font !important;
 }
+
+.ribbon {
+  width: 0px;
+  height: 25px;
+  border-left: 15px solid $warning;
+  border-right: 15px solid $warning;
+  border-bottom: 17px solid transparent;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-weight: $semiBold;
+}
