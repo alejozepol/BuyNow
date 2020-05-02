@@ -1,0 +1,17 @@
+<section class="productSmall space_2_margin space_2">
+  <img class="productSmall__bg" src="assets/bgCardProductsSmall.png" alt="cover">
+  <div class="productSmall__percentaje ribbon"  *ngIf="product.discount">
+    {{product.percentaje}}%
+  </div>
+  <img class="productSmall__img" [src]="product.image" [alt]="product.title">
+  <h4 class="productSmall__title primary">{{product.title |titlecase}}</h4>
+  <div class="productSmall__description">{{product.description}}</div>
+  <div class="productSmall__price">
+    <div [ngClass]="{'desactive tachado' :product.discount }" class="productSmall__price-value primary">
+      {{product.price | currency :'COP':'$':'4.0'}}
+    </div>
+    <div class="productSmall__price-discount warning" *ngIf="product.discount">
+      {{product.price - (product.percentaje * product.price / 100) | currency :'COP':'$':'4.0'}}
+    </div>
+  </div>
+</section>
