@@ -19,6 +19,11 @@
     grid-area: nav;
     justify-self: center;
   }
+  &__search{
+    grid-area: nav;
+    justify-self: center;
+    width: 80%;
+  }
   &__icons{
     grid-area: icons;
     display: flex;
@@ -26,3 +31,8 @@
   }
 
 }
+
+.mat-icon{
+  font-size: 40px !important;
+  }
+  

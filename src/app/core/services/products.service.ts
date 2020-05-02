@@ -59,6 +59,10 @@ export class ProductsService {
   getIdProduct(id: string) {
     return this.products.find((item) => item.id === id);
   }
+  searchTitleProducts(title: string){
+    console.log(title)
+    return this.products.filter((item) => item.title.toLowerCase().includes(title.toLowerCase()));
+  }
 
   createProduct(product : Product){
     return this.products.push(product);

@@ -5,12 +5,14 @@
     </a>
   </h1>
   <nav class="Header__nav">
-<!--     <a class="Header__nav-item" *ngFor="let route of routes" mat-button [routerLink]="route.path"
+    <a class="Header__nav-item" *ngFor="let route of routes" mat-button [routerLink]="route.path"
       routerLinkActive="mat-accent">
       {{route.name}}
-    </a> -->
-    <input class="Header__nav-search" />
+    </a>
   </nav>
+<!--   <div  class="Header__search">
+    <app-search></app-search>
+  </div> -->
   <div class="Header__icons">
     <a class="Header__icons-card white" mat-icon-button routerLink="/card" routerLinkActive="mat-accent">
       <mat-icon matBadge="8" matBadgeColor="accent" matBadgePosition="badge">
