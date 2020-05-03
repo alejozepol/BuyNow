@@ -7,4 +7,6 @@ export interface Product{
   discount?: boolean;
   percentaje?: number;
   images?: string[];
+  colors?: string[];
+  size?: string[];
 }

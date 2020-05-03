@@ -10,12 +10,14 @@ export class ProductsService {
     {
       id: '1',
       title: 'Camiseta',
-      description: 'Camiseta con el logo de platzi',
+      description: 'Con esta increíble camiseta de la platzi conf colombia llevaras puesto contigo el #NuncaPararDeAprender',
       image: 'assets/img/camiseta.png',
       price: 20000,
       discount: true,
       percentaje: 20,
-      images: ['assets/img/hoodie.png','assets/img/mug.png'],
+      images: ['assets/img/hoodie.png', 'assets/img/stickers2.png', 'assets/img/mug.png', 'assets/img/stickers1.png'],
+      size: ['S', 'M', 'L', 'XL'],
+      colors: ['#80a735', '#327580', '#63eaff']
     },
     {
       id: '2',
@@ -39,7 +41,7 @@ export class ProductsService {
       description: 'LLeva a Platzi junto a tu corazon y nunca pares de aprender',
       image: 'assets/img/pin.png',
       price: 5000,
-      images: ['assets/img/hoodie.png','assets/img/mug.png'],
+      images: ['assets/img/hoodie.png', 'assets/img/mug.png'],
     },
     {
       id: '5',
