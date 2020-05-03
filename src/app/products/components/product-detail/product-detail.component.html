@@ -1,15 +1,25 @@
-<mat-card class="ProductoDetail">
-  <img class="ProductoDetail__img" [src]='product.image'>
-  <mat-card class="ProductoDetail__content">
-    <div class="ProductoDetail__content-header">
-      <h2 class="ProductoDetail__content-header-title">
-        {{product.title}}
-      </h2>
-      <h3 class="ProductoDetail__content-header-subtitle">{{product.price}}</h3>
+<section class="productDetail">
+  
+  <div class="productDetail__percentaje ribbon" *ngIf="product.discount">
+    {{product.percentaje}}%
+  </div>
+  <div class="productDetail__imagens">
+    <img class="productDetail__imagens-bg" src="assets/bgCardProductsLG.png" alt="cover">
+    <div class="productDetail__imagens-segundary">
+      <img *ngFor="let img of product.images" [src]="img" alt="imagen">
     </div>
-    <p class="ProductoDetail__content-description">{{product.description}}</p>
-    <div class="ProductoDetail__content-action">
-      <button mat-flat-button color="accent">Agregar</button>
-    </div>
-  </mat-card>
-</mat-card>
+    <img class="productDetail__imagens-principal" [src]="product.image">
+    
+  </div>
+  <div class="productDetail__detail">
+<h2>{{product.title}}</h2>
+<div class="productDetail__detail-price">
+  <div [ngClass]="{'desactive tachado' :product.discount }" class="productDetail__detail-price-value white">
+    {{product.price | currency :'COP':'$':'4.0'}}
+  </div>
+  <div class="productDetail__detail-price-discount warning" *ngIf="product.discount">
+    {{product.price - (product.percentaje * product.price / 100) | currency :'COP':'$':'4.0'}}
+  </div>
+</div>
+  </div>
+</section>
