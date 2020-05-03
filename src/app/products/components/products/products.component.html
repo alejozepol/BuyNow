@@ -1,7 +1,12 @@
 <section class="Products">
-  <app-product-md
-    *ngFor="let product of products"
-    [product]="product"
-  >
-  </app-product-md>
+  <h2 class="Products__title primary">Listado De productos</h2>
+  <div class="Products__detail">
+    <div class="Products__detail-items">
+      <app-product-md
+        *ngFor="let product of products"
+        [product]="product"
+      >
+      </app-product-md>
+    </div>
+  </div>
 </section>

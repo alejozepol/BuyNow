@@ -1,9 +1,23 @@
+@import '../../../../styles/var';
+
 .Products{
-  display: grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-template-rows: 400px;
-  grid-auto-rows: 400px;
-  justify-items: center;
-  justify-content: center;
-  padding: 50px 0;
+  display: block;
+  font-family: $font !important;
+  &__title{
+    margin-top: 3% !important;
+    padding-left: 10%;
+  }
+  &__detail{
+    justify-self: center;
+    display: list-item;
+    margin-top: 6%;
+    &-items{
+      -webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -moz-column-count: 3; /* Firefox */
+      column-count: 3;
+      -webkit-column-gap: 0.5em; /* Chrome, Safari, Opera */
+      -moz-column-gap: 0.5em; /* Firefox */
+      column-gap: 0.5em;
+    }
+  }
 }

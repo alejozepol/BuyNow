@@ -3,12 +3,12 @@
 .productMd{
   width: 300px;
   height: 470px;
-  border-radius: 20px;
+  border-radius: 17px;
   box-shadow: 0 4px 3px 0 rgba($dark, 0.16); 
   position: relative;
   display: grid;
-  grid-template-areas: "title" "price" "img" "description" ;
-  grid-template-rows: auto auto 260px auto auto auto;
+  grid-template-areas: "content" "action";
+  grid-template-rows: 80% 20%;
   justify-items: center;
   align-items: center;
   &__bg{
@@ -22,18 +22,41 @@
     top: 0;
     left: 10%;
   }
-  &__img{
-    width: 250px;
-  }
-  &__price{
-    grid-area: price;
-    display: flex;
-    justify-content: space-evenly;
+  &__content{
     width: 100%;
-    font-size: $h4;
-    font-weight: $semiBold;
+    display: grid;
+    grid-template-areas: "title" "price" "img" "description" "action" ;
+    grid-template-rows: auto auto 260px auto ;
+    justify-items: center;
+    align-items: center;
+    &-img{
+      width: 200px;
+    }
+    &-price{
+      margin-top: 3%;
+      grid-area: price;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      font-size: $h4;
+      font-weight: $semiBold;
+    }
+    &-title{
+      grid-area: title;
+      width: 60%;
+      text-align: center;
+    }
   }
-  &__title{
-    grid-area: title;
+  &__action{
+    width: 80%;
+    grid-area: action;
+    &-addCard{
+      width: 100% !important;
+      border-radius: 30px;
+      height: 50px;
+      font-size: $h5;
+      z-index: 1024;
+      border: 1px solid $primary;
+    }
   }
 }
