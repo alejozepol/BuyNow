@@ -1,0 +1,49 @@
+@import '../../../../styles/var';
+
+.footer{
+  height: 100%;
+  display: grid;
+  grid-template-areas: "logo logo" " text form";
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 30% 70%;
+  justify-items: center;
+  align-items: center;
+  &__img{
+    grid-area: logo;
+  }
+  &__text{
+    width: 80%;
+    text-align: center;
+    grid-area: text;
+    justify-self: right;
+  }
+  &__form{
+    width: 80%;
+    height: 50px;
+    grid-area: form;
+    justify-self: left;
+    display: grid;
+    grid-template-areas: "input btn";
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    &-input{
+      grid-area: input;
+      height: 99%;
+      border-radius: 30px 0 0 30px;
+      border: 1px solid $segundary;
+      text-align: center;
+      font-size: $h4;
+      &::placeholder{
+        text-align: center;
+        font-size: $h4;
+      }
+    }
+    &-btn{
+      grid-area: btn;
+      height: 100%;
+      border-radius: 0px 30px 30px 0px;
+      font-size: $h2;    
+      background: $gradiente;
+    }
+  }
+}
