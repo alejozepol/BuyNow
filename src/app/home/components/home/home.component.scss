@@ -3,12 +3,16 @@
 .Home{
   height: 100%;
   display: grid;
-  grid-template-areas: "banner" "products" "publicidad";
+  grid-template-areas: "banner" "titleProducts" "products" "publicidad";
   grid-template-rows: 60vh auto auto;
   &__bestProducts{
     grid-area: products ;
     max-width: 96vw;
     @include styleScrollX
+  }
+  &__titleProducts{
+    grid-area: titleProducts;
+    padding-left: 10%;
   }
   &__publicidad{
     grid-area: publicidad;
