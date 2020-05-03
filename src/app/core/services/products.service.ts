@@ -16,7 +16,7 @@ export class ProductsService {
       discount: true,
       percentaje: 20,
       images: ['assets/img/hoodie.png', 'assets/img/stickers2.png', 'assets/img/mug.png', 'assets/img/stickers1.png'],
-      size: ['S', 'M', 'L', 'XL'],
+      sizes: ['S', 'M', 'L', 'XL'],
       colors: ['#80a735', '#327580', '#63eaff']
     },
     {

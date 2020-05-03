@@ -50,13 +50,5 @@
   &__action{
     width: 80%;
     grid-area: action;
-    &-addCard{
-      width: 100% !important;
-      border-radius: 30px;
-      height: 50px;
-      font-size: $h5;
-      z-index: 1024;
-      border: 1px solid $primary;
-    }
   }
 }

@@ -21,3 +21,23 @@ body {
   color: $white;
   font-weight: $semiBold;
 }
+
+.circule{
+  width: 21px;
+  height: 21px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.btn{
+  &__gradiente{
+    border: 1px solid $primary !important;
+    @include bg-gradiente;
+    &-LG{
+      width: 100% !important;
+      border-radius: 30px !important;
+      height: 50px;
+      font-size: $h5;
+  }
+  }
+}

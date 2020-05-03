@@ -21,3 +21,6 @@
 .bg-gradiente{
   background: $gradiente;
 }
+@mixin bg-gradiente{
+  background: $gradiente;
+}

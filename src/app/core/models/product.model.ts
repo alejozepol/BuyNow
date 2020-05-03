@@ -8,5 +8,5 @@ export interface Product{
   percentaje?: number;
   images?: string[];
   colors?: string[];
-  size?: string[];
+  sizes?: string[];
 }
