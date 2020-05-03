@@ -11,13 +11,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProductSmallComponent } from './components/product-small/product-small.component';
+import { ProductMdComponent } from './components/product-md/product-md.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    ProductSmallComponent
+    ProductSmallComponent,
+    ProductMdComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { ProductSmallComponent } from './components/product-small/product-small.
     HeaderComponent,
     FooterComponent,
     RouterModule,
-    ProductSmallComponent
+    ProductSmallComponent,
+    ProductMdComponent
   ]
 })
 export class SharedModule { }
