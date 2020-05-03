@@ -28,13 +28,16 @@
     <div class="productDetail__detail-amound">
       <h5 class="productDetail__detail-amound-title segundary">Cantidad</h5>
       <div class="productDetail__detail-amound-content">
-        <button mat-icon-button aria-label="Disminuir">
+        <button *ngIf="amound > 1" mat-icon-button aria-label="Disminuir" (click)="amoundDowd()">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <button *ngIf="amound === 1" mat-icon-button disabled aria-label="Disminuir" (click)="amoundDowd()">
           <mat-icon>remove</mat-icon>
         </button>
         <div class="productDetail__detail-amound-content--number">
-          <p>1</p>
+          <p>{{amound}}</p>
         </div>
-        <button mat-icon-button aria-label="Disminuir">
+        <button mat-icon-button aria-label="Disminuir" (click)="amoundUp()">
           <mat-icon>add</mat-icon>
         </button>
       </div>
@@ -42,21 +45,25 @@
     <div class="productDetail__detail-colors">
       <h5 class="segundary">Colores</h5>
       <div class="productDetail__detail-colors-content">
-        <div class="circule productDetail__detail-colors-content-item" *ngFor="let color of product.colors" [ngStyle]="{'background-color':color}">
+        <div class="productDetail__detail-colors-content-item" *ngFor="let color of product.colors">
+          <div class="circule productDetail__detail-colors-content-item-color" [ngStyle]="{'background-color':color}"></div>
+          <input class="productDetail__detail-colors-content-item-radio" type="radio" [id]="color" [name]="color" [value]="color" [(ngModel)]="selectColor">
         </div>
       </div>
     </div>
     <div class="productDetail__detail-size">
       <h5 class="segundary">Talla</h5>
-      <div class="productDetail__detail-size-content">
-        <div class="productDetail__detail-size-content-item" *ngFor="let size of product.sizes">
-          {{size}}
+      <div class="productDetail__detail-size-content"> 
+        <div class="productDetail__detail-size-content-item" 
+        *ngFor="let size of product.sizes">
+          <input type="radio" [id]="size" [name]="size" [value]="size" [(ngModel)]="selectSize">
+          <label [ngClass]="{'white' :selectSize === size}" class="productDetail__detail-size-content-item--label" [for]="size">{{size}}</label>
         </div>
       </div>
 
     </div>
     <div class="productDetail__detail-action">
-      <button mat-raised-button class="productDetail__detail-action-add btn__gradiente btn__gradiente-LG ">Agregar</button>
+      <button (click)="addCard(product)" mat-raised-button class="productDetail__detail-action-add btn__gradiente btn__gradiente-LG ">Agregar</button>
     </div>
   </div>
 </section>

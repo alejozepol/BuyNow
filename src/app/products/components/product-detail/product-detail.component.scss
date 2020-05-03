@@ -56,7 +56,7 @@
     padding-left: 5%;
     grid-area: detail;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       "percentaje percentaje"
       "title title"
       "price price"
@@ -65,92 +65,153 @@
       "colors size"
       "action action";
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 50px repeat(2, $h1) auto ;
+    grid-template-rows: 50px repeat(2, $h1) auto;
     justify-items: center;
     align-items: center;
-      &-percentaje {
-        grid-area: percentaje;
-        justify-self: right;
-        margin-right: 10%;
-      }
-      &-title{
-        grid-area: title;
-        text-align: center;
-      }
-      &-price {
-        margin-top: 3%;
-        grid-area: price;
+
+    &-percentaje {
+      grid-area: percentaje;
+      justify-self: right;
+      margin-right: 10%;
+    }
+
+    &-title {
+      grid-area: title;
+      text-align: center;
+    }
+
+    &-price {
+      margin-top: 3%;
+      grid-area: price;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      font-size: $h4;
+      font-weight: $semiBold;
+    }
+
+    &-description {
+      grid-area: description;
+    }
+
+    &-amound {
+      grid-area: amound;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-content {
+        margin-top: 10px;
         display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        font-size: $h4;
-        font-weight: $semiBold;
-      }
-      &-description{
-        grid-area: description;
-      }
-      &-amound{
-        grid-area: amound;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        &-content{
-          margin-top: 10px;
+
+        &--number {
+          width: 60px;
+          height: 40px;
+          border: 1px solid $segundary;
+          border-radius: 10px;
           display: flex;
           justify-content: center;
           align-items: center;
-          &--number{
-            width: 60px;
-            height: 40px;
-            border: 1px solid $segundary;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            & > p{
-              font-size: $h6 !important;
+
+          &>p {
+            font-size: $h6 !important;
+          }
+        }
+      }
+    }
+
+    &-colors {
+      height: 100%;
+      grid-area: colors;
+      display: grid;
+      grid-template-rows: 20% 80%;
+
+      &-content {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &-item {
+          display: grid;
+          grid-template-areas: "color";
+          align-items: center;
+          justify-content: center;
+          border: none;
+          width: 23px;
+          height: 23px;
+
+          &>input {
+            grid-area: color;
+            &[type="radio"i] {
+              border-radius: 50%;
+              width: 23px;
+              height: 23px;
+              margin: 0;
+              -webkit-appearance: none;
+              &:checked{
+                border: 3px solid $dark;
+              }
             }
           }
-        }
-      }
-      &-colors{
-        height: 100%;
-        grid-area: colors;
-        display: grid;
-        grid-template-rows: 20% 80%;
-        &-content{
-          margin-top: 10%;
-          display: flex;
-          justify-content: space-around;
-        }
-      }
-      &-size{
-        width: 80%;
-        height: 100%;
-        text-align: center;
-        display: grid;
-        grid-template-rows: 20% 80%;
-        grid-area: size;
-        &-content{
-          margin-top: 10%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          font-size: $h6 !important;
-          &-item{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid $primary;
-            width: 30px;
-            height: 30px;
+          &-color {
+            grid-area: color;
           }
         }
       }
-      &-action{
-        grid-area: action;
-        width: 80%;
+    }
+
+    &-size {
+      width: 80%;
+      height: 100%;
+      text-align: center;
+      display: grid;
+      grid-template-rows: 20% 80%;
+      grid-area: size;
+
+      &-content {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: $h6 !important;
+
+        &-item {
+          display: grid;
+          grid-template-areas: "size";
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $primary;
+          width: 30px;
+          height: 30px;
+
+          &>input {
+            grid-area: size;
+            &[type="radio"i] {
+              border-radius: 0px;
+              width: 30px;
+              height: 30px;
+              margin: 0;
+              -webkit-appearance: none;
+              border: 1px solid $segundary;
+              &:checked{
+                background: $primary;
+                color: $white;
+              }
+            }
+          }
+          &>label {
+            grid-area: size;
+          }
+        }
       }
+    }
+
+    &-action {
+      grid-area: action;
+      width: 80%;
+    }
   }
 }
