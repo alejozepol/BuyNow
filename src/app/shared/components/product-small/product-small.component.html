@@ -4,8 +4,10 @@
     {{product.percentaje}}%
   </div>
   <img class="productSmall__img" [src]="product.image" [alt]="product.title">
-  <h4 class="productSmall__title primary">{{product.title |titlecase}}</h4>
-  <div class="productSmall__description">{{product.description}}</div>
+  <h4 class="productSmall__title primary">{{product.title |titlecase | slice:0:12}}</h4>
+  <div class="productSmall__description">{{product.description | slice:0:20}}
+    <span *ngIf="product.description.length > 20" >...</span>
+  </div>
   <div class="productSmall__price">
     <div [ngClass]="{'desactive tachado' :product.discount }" class="productSmall__price-value primary">
       {{product.price | currency :'COP':'$':'4.0'}}
