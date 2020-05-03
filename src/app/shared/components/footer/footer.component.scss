@@ -32,17 +32,17 @@
       border-radius: 30px 0 0 30px;
       border: 1px solid $segundary;
       text-align: center;
-      font-size: $h4;
+      font-size: $h5;
       &::placeholder{
         text-align: center;
-        font-size: $h4;
+        font-size: $h5;
       }
     }
     &-btn{
       grid-area: btn;
       height: 100%;
       border-radius: 0px 30px 30px 0px;
-      font-size: $h2;    
+      font-size: $h3;    
       background: $gradiente;
     }
   }

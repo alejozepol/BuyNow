@@ -26,10 +26,14 @@
     width: 150px;
   }
   &__price{
+    grid-area: price;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    font-size: $h4;
+    font-size: $h5;
     font-weight: $semiBold;
+  }
+  &__title{
+    grid-area: title;
   }
 }
