@@ -1,3 +1,4 @@
+@import '../var';
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -21,9 +22,19 @@ $mat-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-light-theme($mat-primary, $mat-accent, $mat-warn);
 
+
+$custom-typography: mat-typography-config(
+  $font-family: $font,
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500));
+
+  @include angular-material-typography($custom-typography);
+
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($theme);
 
 /* You can add global styles to this file, and also import other style files */
+
