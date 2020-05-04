@@ -12,10 +12,12 @@
     grid-area: logo;
   }
   &__text{
+    align-self: center;
     width: 80%;
     text-align: center;
     grid-area: text;
     justify-self: right;
+    line-height: normal;
   }
   &__form{
     width: 80%;
