@@ -1,23 +1,19 @@
 @import '../../../../styles/var';
 
-.Products{
-  display: block;
-  font-family: $font !important;
-  &__title{
-    margin-top: 3% !important;
-    padding-left: 10%;
+.Products {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    text-align: center;
   }
-  &__detail{
+
+  &__detail {
+    width: 100%;
     justify-self: center;
-    display: list-item;
-    margin-top: 6%;
-    &-items{
-      -webkit-column-count: 3; /* Chrome, Safari, Opera */
-      -moz-column-count: 3; /* Firefox */
-      column-count: 3;
-      -webkit-column-gap: 0.5em; /* Chrome, Safari, Opera */
-      -moz-column-gap: 0.5em; /* Firefox */
-      column-gap: 0.5em;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }

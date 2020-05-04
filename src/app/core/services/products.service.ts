@@ -17,14 +17,16 @@ export class ProductsService {
       percentaje: 20,
       images: ['assets/img/hoodie.png', 'assets/img/stickers2.png', 'assets/img/mug.png', 'assets/img/stickers1.png'],
       sizes: ['S', 'M', 'L', 'XL'],
-      colors: ['#80a735', '#327580', '#63eaff']
+      colors: ['#80a735', '#327580']
     },
     {
       id: '2',
-      title: 'hoodie',
-      description: 'Cahqueta o Hoodie con el logo de platzi color azul',
+      title: 'Caqueta',
+      description: 'con esta increible cahqueta o hoodie con el logo de platzi aguataras todas tus madrugadas mientras #nuncaParasDeAprender',
       image: 'assets/img/hoodie.png',
-      price: 35000
+      price: 35000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      colors: ['#80a735', '#327580']
     },
     {
       id: '3',
@@ -33,7 +35,9 @@ export class ProductsService {
       image: 'assets/img/mug.png',
       price: 16000,
       discount: true,
-      percentaje: 18
+      percentaje: 18,
+      sizes: ['U'],
+      colors: ['#80a735', '#fff', '#63eaff']
     },
     {
       id: '4',
@@ -42,6 +46,8 @@ export class ProductsService {
       image: 'assets/img/pin.png',
       price: 5000,
       images: ['assets/img/hoodie.png', 'assets/img/mug.png'],
+      sizes: ['U'],
+      colors: ['#80a735']
     },
     {
       id: '5',
@@ -50,14 +56,18 @@ export class ProductsService {
       image: 'assets/img/stickers1.png',
       price: 4000,
       discount: true,
-      percentaje: 10
+      percentaje: 10,
+      sizes: ['U'],
+      colors: ['#80a735']
     },
     {
       id: '6',
       title: 'Stickers Nunca Pares de Aprender',
       description: 'Stickers o pegatin con el slogan de Nunca Pares de Aprender',
       image: 'assets/img/stickers2.png',
-      price: 4000
+      price: 4000,
+      sizes: ['U'],
+      colors: ['#80a735']
     },
     {
       id: '7',
@@ -65,6 +75,8 @@ export class ProductsService {
       description: 'Camiseta con el logo de platzi',
       image: 'assets/img/camiseta.png',
       price: 20000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      colors: ['#80a735', '#327580']
     },
     {
       id: '8',
@@ -73,14 +85,18 @@ export class ProductsService {
       image: 'assets/img/hoodie.png',
       price: 35000,
       discount: true,
-      percentaje: 10
+      percentaje: 10,
+      sizes: ['S', 'M', 'L', 'XL'],
+      colors: ['#80a735', '#327580']
     },
     {
       id: '9',
       title: 'Mug',
       description: 'Increible mug blanco con el logo de platzi',
       image: 'assets/img/mug.png',
-      price: 16000
+      price: 16000,
+      sizes: ['U'],
+      colors: ['#fff', '#63eaff']
     },
     {
       id: '10',
@@ -89,14 +105,18 @@ export class ProductsService {
       image: 'assets/img/pin.png',
       price: 5000,
       discount: true,
-      percentaje: 25
+      percentaje: 25,
+      sizes: ['U'],
+      colors: ['#80a735']
     },
     {
       id: '11',
       title: 'Stickers Logo Platzi',
       description: 'Stickers o pegatin con el logo de Platzi',
       image: 'assets/img/stickers1.png',
-      price: 4000
+      price: 4000,
+      sizes: ['U'],
+      colors: ['#80a735']
     },
     {
       id: '12',
@@ -105,7 +125,9 @@ export class ProductsService {
       image: 'assets/img/stickers2.png',
       price: 4000,
       discount: true,
-      percentaje: 50
+      percentaje: 50,
+      sizes: ['U'],
+      colors: ['#80a735']
     },
   ];
   constructor() { }

@@ -1,4 +1,4 @@
-<section class="productMd space_3_bottom_margin space_2_left_margin space_2_right_margin space_2">
+<section class="productMd space_2_margin space_2">
   <img  class="productMd__bg" src="assets/bgCardProductsMD.png" alt="cover">
   <div class="productMd__percentaje ribbon" *ngIf="product.discount">
     {{product.percentaje}}%
@@ -10,7 +10,8 @@
       <span *ngIf="product.title.length > 12" >...</span>
     </h3>
     <div class="productMd__content-description">
-    <p>{{product.description}}</p>
+    <p>{{product.description | slice:0:60}}</p>
+    <span *ngIf="product.title.length > 60" >...</span>
     </div>
     <div class="productMd__content-price">
       <div [ngClass]="{'desactive tachado' :product.discount }" class="productMd__content-price-value white">
@@ -22,6 +23,12 @@
     </div>
   </div>
       <div class="productMd__action">
-        <button mat-raised-button class="productMd__action-addCard btn__gradiente btn__gradiente-LG">Agregar</button>
+        <button
+          mat-raised-button
+          class="productMd__action-addCard btn__gradiente btn__gradiente-LG"
+          (click)="addCart(product)"
+        >
+          Agregar
+        </button>
       </div>
 </section>
