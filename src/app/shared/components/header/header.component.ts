@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Routes } from '../../models/routes.model';
+import { OrderService } from 'src/app/core/services/order.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +11,6 @@ import { Routes } from '../../models/routes.model';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
   routes: Routes[] = [
     {
       id: 1,
@@ -21,6 +23,25 @@ export class HeaderComponent implements OnInit {
       name: 'Products'
     }
   ];
+
+  total$: Observable<number>;
+
+  constructor(
+    private orderService: OrderService
+  ) {
+    this.total$ = this.orderService.cart$
+                  .pipe(
+                    map(items => {
+                      let amound = 0;
+                      if (items.length){
+                        items.map((item) => {
+                          amound = amound + item.amound;
+                        });
+                      }
+                      return amound;
+                      }
+                    ));
+                  }
 
   ngOnInit(): void {
   }

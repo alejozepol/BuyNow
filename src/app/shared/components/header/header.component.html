@@ -16,7 +16,7 @@
   </div> -->
   <div class="Header__icons">
     <a class="Header__icons-card white" mat-icon-button routerLink="/card" routerLinkActive="mat-accent">
-      <mat-icon matBadge="8" matBadgeColor="accent" matBadgePosition="badge">
+      <mat-icon [matBadge]="total$ | async" matBadgeColor="accent" matBadgePosition="badge" matBadgeOverlap="false">
         shopping_cart
       </mat-icon>
     </a>

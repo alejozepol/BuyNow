@@ -21,7 +21,7 @@ export class ProductDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService,
-    private orderService: OrderService
+    private orderService: OrderService,
   ) {
 
   }
@@ -54,7 +54,7 @@ export class ProductDetailComponent implements OnInit {
       totalPrice: (product.price * this.amound),
     };
     this.order.totalPrice = this.order.totalPrice - this.order.valueDiscount;
-    console.log(this.order);
+    this.orderService.addCart(this.order);
   }
 
   amoundUp() {
