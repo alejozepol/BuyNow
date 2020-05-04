@@ -3,22 +3,23 @@
 .Home{
   height: 100%;
   display: grid;
-  grid-template-areas: "banner" "titleProducts" "products" "publicidad";
+  grid-template-areas: "banner" "products" "publicidad";
   grid-template-rows: 60vh auto auto;
   &__bestProducts{
     grid-area: products ;
-    max-width: 96vw;
-    @include styleScrollX
-  }
-  &__titleProducts{
-    grid-area: titleProducts;
-    padding-left: 10%;
+    max-width: 98vw;
   }
   &__publicidad{
     grid-area: publicidad;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    max-width: 98vw;
     justify-items: center;
+    & > img{
+      width: 100%;
+      margin: 5%;
+    }
   }
 }
 app-banner{

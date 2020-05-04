@@ -1,7 +1,15 @@
 <section class="bestProducts">
-  <app-product-small
-    *ngFor="let product of products"
-    [product]="product"
-    [routerLink] = "['/products',product.id]"
-  ></app-product-small>
+  <div class="bestProducts__title space_2_margin">
+    <h3 class="primary">Productos en promoción</h3>
+    <a [routerLink]="'/products'">
+      <p class="segundary">ver más</p>
+    </a>
+  </div>
+  <div class="bestProducts__content">
+    <app-product-small
+      *ngFor="let product of products"
+      [product]="product"
+      [routerLink] = "['/products',product.id]"
+    ></app-product-small>
+  </div>
 </section>

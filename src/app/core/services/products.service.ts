@@ -33,7 +33,7 @@ export class ProductsService {
       image: 'assets/img/mug.png',
       price: 16000,
       discount: true,
-      percentaje: 25
+      percentaje: 18
     },
     {
       id: '4',
@@ -50,7 +50,7 @@ export class ProductsService {
       image: 'assets/img/stickers1.png',
       price: 4000,
       discount: true,
-      percentaje: 25
+      percentaje: 10
     },
     {
       id: '6',
@@ -65,53 +65,57 @@ export class ProductsService {
       description: 'Camiseta con el logo de platzi',
       image: 'assets/img/camiseta.png',
       price: 20000,
-      discount: true,
-      percentaje: 20
     },
     {
       id: '8',
       title: 'hoodie',
       description: 'Cahqueta o Hoodie con el logo de platzi color azul',
       image: 'assets/img/hoodie.png',
-      price: 35000
+      price: 35000,
+      discount: true,
+      percentaje: 10
     },
     {
       id: '9',
       title: 'Mug',
       description: 'Increible mug blanco con el logo de platzi',
       image: 'assets/img/mug.png',
-      price: 16000,
-      discount: true,
-      percentaje: 25
+      price: 16000
     },
     {
       id: '10',
       title: 'Pin',
       description: 'LLeva a Platzi junto a tu corazon y nunca pares de aprender',
       image: 'assets/img/pin.png',
-      price: 5000
+      price: 5000,
+      discount: true,
+      percentaje: 25
     },
     {
       id: '11',
       title: 'Stickers Logo Platzi',
       description: 'Stickers o pegatin con el logo de Platzi',
       image: 'assets/img/stickers1.png',
-      price: 4000,
-      discount: true,
-      percentaje: 25
+      price: 4000
     },
     {
       id: '12',
       title: 'Stickers Nunca Pares de Aprender',
       description: 'Stickers o pegatin con el slogan de Nunca Pares de Aprender',
       image: 'assets/img/stickers2.png',
-      price: 4000
+      price: 4000,
+      discount: true,
+      percentaje: 50
     },
   ];
   constructor() { }
 
   getAllproducts() {
     return this.products;
+  }
+  getAllProductsDiscount(){
+    return this.products.filter((item) => item.discount);
+
   }
 
   getIdProduct(id: string) {

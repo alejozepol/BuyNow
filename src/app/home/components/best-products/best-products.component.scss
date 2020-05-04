@@ -1,4 +1,15 @@
+@import '../../../../styles/var';
+
 .bestProducts{
-  display: inline-flex;
-  max-width: 100vw;
+  &__title{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  &__content{
+    display: inline-flex;
+    max-width: 100%;
+    @include styleScrollX;
+  }
 }

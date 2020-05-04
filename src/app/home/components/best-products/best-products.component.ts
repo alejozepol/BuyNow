@@ -17,7 +17,7 @@ export class BestProductsComponent implements OnInit {
   }
 
   getProductsService() {
-    this.products = this.productsService.getAllproducts();
+    this.products = this.productsService.getAllProductsDiscount();
   }
 
 }
