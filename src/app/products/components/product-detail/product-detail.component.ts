@@ -44,6 +44,7 @@ export class ProductDetailComponent implements OnInit {
       id: Date.now(),
       idProduct: product.id,
       titleProduct: product.title,
+      image: product.image,
       color: this.selectColor,
       size: this.selectSize,
       priceProduct: product.price,

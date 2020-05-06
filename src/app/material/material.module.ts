@@ -9,7 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatBadgeModule,
     MatCardModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatStepperModule
   ],
   exports: [
     CommonModule,
@@ -36,7 +38,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatBadgeModule,
     MatCardModule,
     MatInputModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

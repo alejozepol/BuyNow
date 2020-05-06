@@ -1,8 +1,8 @@
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 /* Module */
 import { AppRoutingModule } from './app-routing.module';
@@ -22,14 +22,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LayoutComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     SharedModule,
     BrowserAnimationsModule,
     CoreModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

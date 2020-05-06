@@ -1,0 +1,31 @@
+@import '../../../../styles/var';
+
+.orderProductSm{
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 3px 6px 0 fade-out($dark, 0.16);
+  border-radius: 30px;
+  border: solid 1px $segundary;
+  background-color: $white;
+  display: grid;
+  grid-template-areas: 
+    "img title amound priceTotal";
+  justify-content: space-evenly;
+  align-items: center;
+  &__img{
+    grid-area: img;
+    height: 80%;
+  }
+  &__title{
+    grid-area: title;
+  }
+  &__amound{
+    grid-area: amound;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__priceTotal{
+    grid-area: priceTotal;
+  }
+}

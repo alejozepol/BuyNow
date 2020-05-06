@@ -25,6 +25,7 @@ export class ProductMdComponent implements OnInit {
       id: Date.now(),
       idProduct: product.id,
       titleProduct: product.title,
+      image: product.image,
       color: product.colors[0],
       size: product.sizes[0],
       priceProduct: product.price,
