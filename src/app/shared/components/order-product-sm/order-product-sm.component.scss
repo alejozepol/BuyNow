@@ -1,8 +1,9 @@
 @import '../../../../styles/var';
 
 .orderProductSm{
-  width: 300px;
-  height: 150px;
+  margin: 2%;
+  width: 95%;
+  height: 100px;
   box-shadow: 0 3px 6px 0 fade-out($dark, 0.16);
   border-radius: 30px;
   border: solid 1px $segundary;
@@ -10,6 +11,7 @@
   display: grid;
   grid-template-areas: 
     "img title amound priceTotal";
+  grid-template-columns: 80px auto;
   justify-content: space-evenly;
   align-items: center;
   &__img{

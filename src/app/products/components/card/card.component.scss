@@ -1,0 +1,30 @@
+@import '../../../../styles/var';
+
+.mat-stepper-vertical, .mat-stepper-horizontal, .mat-horizontal-content-container{
+  height: 100%;  
+}
+
+.ProductList{
+  height: 100%;
+  display: grid;
+  grid-template-areas: "products summary";
+  justify-items: center;
+  &__products{
+    width: 100%;
+    height: 50vh;
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include styleScrollY;
+  }
+  &__summary{
+    align-self: center;
+    grid-area: summary;
+    width: 80%;
+    &-item{
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+}

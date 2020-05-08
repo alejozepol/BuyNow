@@ -1,15 +1,13 @@
 .Layout {
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-columns: 100%;
-  grid-template-rows: 10vh auto 30vh;
+  grid-template-rows: 95px auto 300px;
   min-height: 100vh;
   &__header{
     grid-area: header;
   }
   &__content{
     grid-area: main;
-    height: 100%;
     width: 100%;
     justify-self: center;
   }

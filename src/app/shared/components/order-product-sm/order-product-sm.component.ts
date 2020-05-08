@@ -13,4 +13,11 @@ export class OrderProductSmComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  amoundUp(){
+    this.order.amound++;
+  }
+  amoundDown(){
+    this.order.amound--;
+  }
+
 }

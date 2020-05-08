@@ -2,11 +2,27 @@
   {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
 </button>
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+  <mat-step>
     <ng-template matStepLabel>Lista de Productos</ng-template>
-    <ng-container *ngFor="let order of orders">
-      <app-order-product-sm [order]="order"></app-order-product-sm>
-    </ng-container>
+    <section class="ProductList">
+      <div class="ProductList__products">
+        <app-order-product-sm *ngFor="let order of orders$ | async" [order]="order"></app-order-product-sm>
+      </div>
+      <div class="ProductList__summary">
+        <div class="ProductList__summary-item">
+          <h6 class="primary">Total Unidades:</h6>
+          <h6>{{totalAmound$ | async}}</h6>
+        </div> 
+        <div class="ProductList__summary-item">
+          <h6 class="primary">Total Productos:</h6>
+          <h6>{{totalProducts$ | async }}</h6>
+        </div>
+        <div class="ProductList__summary-item">
+          <h6 class="primary">Total Pedido:</h6>
+          <h6>{{totalPrice$ | async | currency :'COP':'$':'4.0'}}</h6>
+        </div>
+      </div>
+    </section>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">

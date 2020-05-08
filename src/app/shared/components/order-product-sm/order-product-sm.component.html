@@ -1,17 +1,17 @@
 <section class="orderProductSm">
   <img class="orderProductSm__img" [src]="order.image" [alt]="order.titleProduct">
-  <h4 class="orderProductSm__title">{{order.titleProduct  | currency :'COP':'$':'4.0'}}</h4>
+  <h6 class="orderProductSm__title">{{order.titleProduct}}</h6>
   <div class="orderProductSm__amound">
-    <button *ngIf="order.amound > 1" mat-icon-button aria-label="Disminuir">
-      <mat-icon>remove</mat-icon>
+    <button *ngIf="order.amound > 1" mat-icon-button aria-label="Disminuir" (click)="amoundDown()">
+      <mat-icon class="segundary">remove</mat-icon>
     </button>
-    <button *ngIf="order.amound === 1" mat-icon-button disabled aria-label="Disminuir" (click)="amoundDowd()">
+    <button *ngIf="order.amound === 1" mat-icon-button disabled aria-label="Disminuir">
       <mat-icon>remove</mat-icon>
     </button>
     <p>{{order.amound}}</p>
-    <button mat-icon-button aria-label="Disminuir">
-      <mat-icon>add</mat-icon>
+    <button mat-icon-button aria-label="Disminuir"(click)="amoundUp()">
+      <mat-icon class="segundary">add</mat-icon>
     </button>
   </div>
-  <p class="orderProductSm__priceTotal">{{order.totalPrice}}</p>
+  <p class="orderProductSm__priceTotal">{{order.totalPrice * order.amound | currency :'COP':'$':'4.0'}}</p>
 </section>
