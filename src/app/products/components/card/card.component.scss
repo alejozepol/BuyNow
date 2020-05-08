@@ -28,3 +28,17 @@
 
   }
 }
+
+.DateSend{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  & > mat-form-field{
+    width: 80%;
+  }
+  &__btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}

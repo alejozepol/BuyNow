@@ -45,4 +45,14 @@ body {
       font-size: $h5;
     }
   }
+  &__segundary {
+    border: 1px solid $primary !important;
+    &-LG {
+      width: 100% !important;
+      border-radius: 30px !important;
+      height: 50px;
+      font-size: $h5;
+    }
+  }
+  
 }

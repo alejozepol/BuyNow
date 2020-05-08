@@ -12,17 +12,18 @@ import { map } from 'rxjs/operators';
 })
 export class CardComponent implements OnInit {
 
-  isLinear = false;
-  secondFormGroup: FormGroup;
+  isLinear = true;
+  DataSend: FormGroup;
   orders$: Observable<Order[]>;
   totalPrice$: Observable<number>;
   totalAmound$: Observable<number>;
   totalProducts$: Observable<number>;
 
   constructor(
-    private _formBuilder: FormBuilder,
+    private formBuilder: FormBuilder,
     private orderService: OrderService
   ) {
+    this.DataSend
   }
 
   ngOnInit() {
@@ -37,9 +38,10 @@ export class CardComponent implements OnInit {
         }
         return amound;
         }));
+
     this.totalProducts$ = this.orders$.pipe(
-      map(items => items.length)
-    )
+      map(items => items.length));
+
     this.totalPrice$ = this.orders$.pipe(
       map(items => {
         let prices = 0;
@@ -50,8 +52,12 @@ export class CardComponent implements OnInit {
         }
         return prices;
         }));
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
+
+    this.DataSend = this.formBuilder.group({
+      name: ['', Validators.required],
+      address: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', [Validators.email, Validators.required]]
     });
   }
 
