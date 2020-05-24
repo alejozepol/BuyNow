@@ -5,13 +5,17 @@
       <img src='assets/LightLogoRight.png' alt='BuyNow' />
     </a>
   </h1>
+  <input type="checkbox" id="toggle">
+  <label class="Header__menu" mat-icon-button for="toggle">
+    <mat-icon class="Header__menu-open">menu</mat-icon>
+  </label>
   <nav class="Header__nav">
     <a class="Header__nav-item" *ngFor="let route of routes" mat-button [routerLink]="route.path"
       routerLinkActive="light">
       {{route.name}}
     </a>
   </nav>
-<!--   <div  class="Header__search">
+  <!--   <div  class="Header__search">
     <app-search></app-search>
   </div> -->
   <div class="Header__icons">

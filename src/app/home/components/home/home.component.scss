@@ -4,7 +4,7 @@
   height: 100%;
   display: grid;
   grid-template-areas: "banner" "products" "publicidad";
-  grid-template-rows: 60vh auto auto;
+  grid-template-rows: auto  auto auto;
   &__bestProducts{
     grid-area: products ;
     max-width: 98vw;
@@ -25,4 +25,8 @@
 app-banner{
   grid-area: banner;
   margin-bottom: 2%;
+}
+
+@media (max-width: 768px){
+
 }

@@ -1,38 +1,53 @@
 @import '../../../../styles/var';
 
-.Header{
+.Header {
   height: 100%;
   padding: 0 8%;
   display: grid;
   grid-template-areas: "logo nav icons";
   grid-template-columns: 20% auto 20%;
   align-items: center;
-  &__logo{
+
+  &__logo {
     grid-area: logo;
-    & > span {
+
+    &>span {
       display: none;
     }
-    & > a{
+
+    &>a {
       text-decoration: none;
       color: inherit;
-      & > img{
+
+      &>img {
         height: 50px;
       }
     }
   }
-  &__nav{
+  &__menu{
+    display: none;
+  }
+  &__nav {
     grid-area: nav;
     justify-self: center;
-    & > a{
-      font-size: $h6;   
+
+    &-img {
+      width: 100%;
+      display: none;
+    }
+
+    &>a {
+      font-size: $h6;
     }
   }
-  &__search{
+
+  &__search {
     grid-area: nav;
     justify-self: center;
     width: 80%;
   }
-  &__icons{
+
+  &__icons {
     grid-area: icons;
     display: flex;
     justify-content: space-evenly;
@@ -40,7 +55,47 @@
 
 }
 
-.mat-icon{
+.mat-icon {
   font-size: $h3 !important;
+}
+#toggle{
+  display: none;
+}
+@media (max-width: 768px) {
+  .Header {
+    grid-template-areas: "logo menu";
+    grid-template-columns: 80% 20%;
+    position: relative;
+    &__menu{
+      display: block;
+      grid-area: menu;
+      justify-self: flex-end;
+      z-index: 3;
+    }
+    &__nav {
+      position: fixed;
+      top: 70px;
+      right: 0%;
+      z-index: 2;
+      display: none;
+      flex-direction: column;
+      align-content: center;
+      background-color: $primary;
+      color: $white;
+      height: 97vh;
+      width: 80vw;
+    }
+    #toggle:checked ~ nav {
+      display: flex;
+    } 
+    &__icons {
+      width: 100vw;
+      height: 60px;
+      align-items: center;
+      position: fixed;
+      bottom: 0%;
+      left: 0%;
+      background-color: $primary;
+    }
   }
-  
+}

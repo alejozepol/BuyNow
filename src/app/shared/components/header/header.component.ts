@@ -23,25 +23,24 @@ export class HeaderComponent implements OnInit {
       name: 'Products'
     }
   ];
-
   total$: Observable<number>;
 
   constructor(
     private orderService: OrderService
   ) {
     this.total$ = this.orderService.cart$
-                  .pipe(
-                    map(items => {
-                      let amound = 0;
-                      if (items.length){
-                        items.map((item) => {
-                          amound = amound + item.amound;
-                        });
-                      }
-                      return amound;
-                      }
-                    ));
-                  }
+      .pipe(
+        map(items => {
+          let amound = 0;
+          if (items.length) {
+            items.map((item) => {
+              amound = amound + item.amound;
+            });
+          }
+          return amound;
+        }
+        ));
+  }
 
   ngOnInit(): void {
   }
