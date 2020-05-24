@@ -30,8 +30,32 @@ export class OrderService {
   getAllCard() {
     return this.cart.getValue();
   }
-  addCart(order: Order) {
-    this.order = [...this.order, order];
-    this.cart.next(this.order);
+  updateMoreElementOrder(id: number){
+    this.order.forEach(element => {
+      if (element.id === id){
+        element.amound++;
+        element.totalPrice = element.priceProduct * element.amound;
+      }
+      this.cart.next(this.order);
+    });
   }
+  updateLessElementOrder(id: number){
+    this.order.forEach(element => {
+      if (element.id === id){
+        element.amound--;
+        element.totalPrice = element.priceProduct * element.amound;
+      }
+      this.cart.next(this.order);
+    });
+  }
+  addCart(order: Order) {
+    const orderExistent = this.order.find(item => item.idProduct === order.idProduct);
+    if (orderExistent) {
+      this.updateMoreElementOrder(orderExistent.id);
+    } else {
+      this.order = [...this.order, order];
+      this.cart.next(this.order);
+    }
+  }
+
 }

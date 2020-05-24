@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OrderService } from 'src/app/core/services/order.service';
 import { Order } from 'src/app/core/models/order.model';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-card',
@@ -23,24 +23,27 @@ export class CardComponent implements OnInit {
     private formBuilder: FormBuilder,
     private orderService: OrderService
   ) {
-    this.DataSend
-  }
+    this.DataSend;
 
-  ngOnInit() {
-    this.orders$ = this.orderService.cart$;
-    this.totalAmound$ = this.orders$.pipe(
+    this.totalAmound$ = this.orderService.cart$.pipe(
       map(items => {
         let amound = 0;
-        if (items.length){
+        if (items.length) {
           items.map((item) => {
             amound = amound + item.amound;
           });
         }
         return amound;
-        }));
+      }
+      ));
 
-    this.totalProducts$ = this.orders$.pipe(
-      map(items => items.length));
+    this.totalProducts$ = this.orderService.cart$.pipe(
+        map(items => items.length));
+  }
+
+  ngOnInit() {
+    this.orders$ = this.orderService.cart$;
+
 
     this.totalPrice$ = this.orders$.pipe(
       map(items => {

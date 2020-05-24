@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Order } from 'src/app/core/models/order.model';
+import { OrderService } from 'src/app/core/services/order.service';
 
 @Component({
   selector: 'app-order-product-sm',
@@ -8,16 +9,16 @@ import { Order } from 'src/app/core/models/order.model';
 })
 export class OrderProductSmComponent implements OnInit {
 @Input() order: Order;
-  constructor() { }
+  constructor(public orderService: OrderService) { }
 
   ngOnInit(): void {
   }
 
   amoundUp(){
-    this.order.amound++;
+    this.orderService.updateMoreElementOrder(this.order.id);
   }
   amoundDown(){
-    this.order.amound--;
+    this.orderService.updateLessElementOrder(this.order.id);
   }
 
 }
