@@ -50,3 +50,23 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer{
+    grid-template-areas: "logo" "text" "form";
+    grid-template-rows:  repeat(3,1fr);
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    &__text{
+      justify-self: center;
+      align-self: flex-end;
+    }
+    &__form{
+      margin-top: 10px;
+      justify-self: center;
+      align-self: flex-start;
+    }
+  }
+
+}
