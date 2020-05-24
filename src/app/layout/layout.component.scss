@@ -1,8 +1,8 @@
 .Layout {
+  height: 100%;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 95px auto 300px;
-  min-height: 100vh;
+  grid-template-rows: 70px auto 220px;
   &__header{
     grid-area: header;
   }
