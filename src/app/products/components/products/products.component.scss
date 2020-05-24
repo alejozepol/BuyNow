@@ -17,3 +17,22 @@
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .Products {
+    &__detail {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 425px) {
+  .Products {
+    &__title {
+      font-size: $h3 !important;
+    }
+    &__detail {
+      grid-template-columns: 1fr;
+    }
+
+  }
+}
