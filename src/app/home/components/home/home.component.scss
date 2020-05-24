@@ -28,5 +28,10 @@ app-banner{
 }
 
 @media (max-width: 768px){
-
+  .Home{
+    &__publicidad{
+      grid-template-columns: 80%;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
 }

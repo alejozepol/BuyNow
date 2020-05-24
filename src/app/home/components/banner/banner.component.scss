@@ -5,10 +5,22 @@
 .swiper-button-prev, .swiper-button-next{
   color: white;
 }
-.swiper-slide{
-  margin: 0 !important;
-}
+
 img{
   width: 100%;
   object-fit: cover;
+}
+
+.movil{
+  display: none;
+}
+
+@media (max-width: 768px){
+  .desk{
+    display: none;
+  }
+  .movil{
+    display: block;
+  }
+  
 }

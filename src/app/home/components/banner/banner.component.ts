@@ -15,6 +15,11 @@ export class BannerComponent implements OnInit {
     'assets/img/img2.jpg',
     'assets/img/img3.jpg',
   ];
+  imagensMov: string[] = [
+    'assets/img/m-img1.jpg',
+    'assets/img/m-img2.jpg',
+    'assets/img/m-img3.jpg',
+  ];
 
   ngOnInit(): void {
     const mySwiper = new Swiper('.swiper-container', {

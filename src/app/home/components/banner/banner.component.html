@@ -1,8 +1,5 @@
-<div class="swiper-container">
+<div class="swiper-container desk">
   <div class="swiper-wrapper">
-<!--     <div *ngFor=" let img of imagens " class="swiper-slide" >
-      <img [src]="img" alt="imagen banner prueba">
-    </div> -->
       <div class="swiper-slide">
         <img [src]="imagens[0]" alt="imagen banner prueba">
       </div>
@@ -13,6 +10,24 @@
         <img [src]="imagens[2]" alt="imagen banner prueba">
       </div>
   </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div  class="swiper-button-prev"></div>
+</div>
+<div class="swiper-container movil">
+  <div class="swiper-wrapper ">
+    <div class="swiper-slide">
+      <img [src]="imagensMov[0]" alt="imagen banner prueba">
+    </div>
+    <div class="swiper-slide">
+      <img [src]="imagensMov[1]" alt="imagen banner prueba">
+    </div>
+    <div class="swiper-slide">
+      <img [src]="imagensMov[2]" alt="imagen banner prueba">
+    </div>
+</div>
   <!-- Add Pagination -->
   <div class="swiper-pagination"></div>
   <!-- Add Arrows -->
