@@ -215,3 +215,30 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .productDetail {
+    grid-template-areas: "imagens" "detail";
+    grid-template-columns: 100%;
+    height: max-content;
+    &__detail {
+      padding-left: 0%;
+      padding: 0% 5%;
+      padding-bottom: 5%;
+      grid-template-areas:
+      "percentaje"
+      "title"
+      "price"
+      "description"
+      "amound"
+      "colors" 
+      "size"
+      "action";
+      grid-template-columns: 1fr;
+      &-percentaje {
+        margin-right: 5%;
+        margin-top: -5%;
+      }
+    }
+  }
+}

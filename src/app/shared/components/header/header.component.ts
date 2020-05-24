@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   }
 
   hideMenu() {
-    if(this.menu){
+    if (this.menu){
       this.menu = false;
     }
   }
