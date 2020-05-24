@@ -23,7 +23,7 @@
     left: 10%;
   }
   &__img{
-    width: 150px;
+    width: 80%;
   }
   &__price{
     grid-area: price;
@@ -35,5 +35,13 @@
   }
   &__title{
     grid-area: title;
+  }
+}
+
+@media (max-width: 768px){
+  .productSmall{
+    width: 40vw;
+    height: 40vh;
+    grid-template-rows: 60% auto auto auto;
   }
 }

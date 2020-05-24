@@ -13,3 +13,14 @@
     @include styleScrollX;
   }
 }
+
+@media (max-width: 425px) {
+
+  .bestProducts{
+    &__title{
+      &-title{
+        font-size: $h4 !important;
+      }
+    }
+  }
+}
