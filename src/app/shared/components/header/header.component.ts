@@ -9,6 +9,7 @@ import { OrderService } from 'src/app/core/services/order.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
 
   routes: Routes[] = [
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
     }
   ];
   total$: Observable<number>;
+  menu = false;
 
   constructor(
     private orderService: OrderService
@@ -44,5 +46,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  hideMenu() {
+    if(this.menu){
+      this.menu = false;
+    }
+  }
+
 
 }

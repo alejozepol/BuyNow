@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 /* Modules */
 import { MaterialModule } from '../material/material.module';
@@ -28,6 +28,7 @@ import { OrderProductSmComponent } from './components/order-product-sm/order-pro
     MaterialModule,
     RouterModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
