@@ -23,7 +23,6 @@ export class CardComponent implements OnInit {
     private formBuilder: FormBuilder,
     private orderService: OrderService
   ) {
-    this.DataSend;
 
     this.totalAmound$ = this.orderService.cart$.pipe(
       map(items => {
@@ -63,5 +62,4 @@ export class CardComponent implements OnInit {
       email: ['', [Validators.email, Validators.required]]
     });
   }
-
 }

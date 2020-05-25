@@ -31,3 +31,41 @@
     grid-area: priceTotal;
   }
 }
+
+@media (max-width: 768px) {
+  .mat-vertical-content{
+    padding: 0 1% 1% 1%;
+  }
+  .orderProductSm{
+    margin: 2%;
+    padding-top: 5%;
+    height: 200px;
+    box-shadow: 0 3px 6px 0 fade-out($dark, 0.16);
+    border-radius: 30px;
+    border: solid 1px $segundary;
+    background-color: $white;
+    display: grid;
+    grid-template-areas: 
+      "img title" 
+      "amound priceTotal";
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    &__img{
+      grid-area: img;
+      height: 100%;
+    }
+    &__title{
+      grid-area: title;
+    }
+    &__amound{
+      grid-area: amound;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__priceTotal{
+      grid-area: priceTotal;
+    }
+  }
+}
