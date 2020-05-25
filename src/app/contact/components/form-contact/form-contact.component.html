@@ -1,1 +1,41 @@
-<p>form-contact works!</p>
+<section class="FormContact">
+  <div class="FormContact__cover">
+    <img class="FormContact__cover-bg" src="assets/cover.png" alt="cover imagen contact"/>
+    <div class="FormContact__cover-text">
+      <p class="FormContact__cover-text-1">¿Tienes alguna duda?</p>
+      <h2 class="FormContact__cover-text-title">Contactanos</h2>
+      <p class="FormContact__cover-text-3">Estamos para ayudarte</p>
+    </div>
+  </div>
+  <form class="FormContact__form" [formGroup]="form" (ngSubmit)="saveMessage($event)">
+    <mat-form-field appearance="outline" class="FormContact__form-name">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Juan López" formControlName="name" type='text' required>
+      <mat-error *ngIf="form.controls.name.hasError('required')">{{'Campo requerido'}}</mat-error>
+      <mat-error *ngIf="form.controls.name.hasError('minlength')">{{'Minimo 5 caracteres te faltan'}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="FormContact__form-email">
+      <mat-label>Correo Electronico</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName='email' type='email' required>
+      <mat-error *ngIf="form.controls.email.hasError('required')">{{'Campo requerido'}}</mat-error>
+      <mat-error *ngIf="form.controls.name.hasError('email')">{{'No es un correo electronico'}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="FormContact__form-textarea">
+      <mat-label>Ingresa tú solicitud</mat-label>
+      <textarea matInput placeholder="necesito la verificar el estado de un pedido" formControlName='text' type='text' required></textarea>
+      <mat-error *ngIf="form.controls.text.hasError('required')">{{'Campo requerido'}}</mat-error>
+      <mat-error *ngIf="form.controls.text.hasError('minlength')">{{'Minimo 10 caracteres te faltan'}}</mat-error>
+    </mat-form-field>
+    <button
+      mat-button
+      type="submit"
+      class="btn__gradiente btn__gradiente-LG"
+      [disabled]="form.invalid"
+      [ngClass]="{'bg-desactive' :form.invalid}"
+    >Enviar
+  </button>
+  </form>
+  
+</section>

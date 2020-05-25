@@ -14,7 +14,7 @@
     color: $value !important
   }
   .bg-#{$color} {
-    background-color: $value !important
+    background: $value !important
   }
 };
 

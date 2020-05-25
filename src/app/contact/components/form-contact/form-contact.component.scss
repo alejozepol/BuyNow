@@ -1,0 +1,27 @@
+.FormContact{
+  max-width: 100vw;
+  display: grid;
+  grid-template-areas: "cover" "form";
+  grid-template-columns: 100%;
+  &__cover{
+    grid-area: cover;
+    position: relative;
+    &-bg{
+      position: absolute;
+      object-fit: fill;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+    &-text{
+      text-align: center;
+    }
+  }
+  &__form{
+    width: 80%;
+    margin: 5% 0%;
+    justify-self: center;
+    display: grid;
+    grid-template-areas: "name" "email" "textArea";
+  }
+}
