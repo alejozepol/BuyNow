@@ -1,14 +1,17 @@
+@import '../../../../styles/var';
 .FormContact{
   max-width: 100vw;
   display: grid;
   grid-template-areas: "cover" "form";
+  grid-template-rows: 20vh auto;
   grid-template-columns: 100%;
   &__cover{
     grid-area: cover;
     position: relative;
+    color: $white;
     &-bg{
       position: absolute;
-      object-fit: fill;
+      object-fit: cover;
       z-index: -1;
       width: 100%;
       height: 100%;
