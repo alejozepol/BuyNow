@@ -12,16 +12,22 @@ import { OrderService } from 'src/app/core/services/order.service';
 
 export class HeaderComponent implements OnInit {
 
+
   routes: Routes[] = [
     {
       id: 1,
       path: '/home',
-      name: 'Home'
+      name: 'Inicio'
     },
     {
       id: 2,
       path: '/products',
-      name: 'Products'
+      name: 'Productos'
+    },
+    {
+      id: 3,
+      path: '/contact',
+      name: 'Contacto'
     }
   ];
   total$: Observable<number>;
@@ -48,7 +54,7 @@ export class HeaderComponent implements OnInit {
   }
 
   hideMenu() {
-    if (this.menu){
+    if (this.menu) {
       this.menu = false;
     }
   }
