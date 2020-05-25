@@ -4,22 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 
-/* Module */
+/* index */
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-
-/* subModule */
+/* Module */
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* component */
+import { LayoutComponent } from './layout/layout.component';
+import { PageNotEntreringComponent } from './page-not-entrering/page-not-entrering.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    PageNotEntreringComponent,
   ],
   imports: [
     FormsModule,

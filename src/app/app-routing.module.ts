@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
+import { PageNotEntreringComponent } from './page-not-entrering/page-not-entrering.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
@@ -22,7 +23,15 @@ const routes: Routes = [
         path: 'products',
         loadChildren: () => import ('./products/products.module').then(m => m.ProductsModule),
       },
+      {
+        path: 'contact',
+        loadChildren: () => import ('./contact/contact.module').then(m => m.ContactModule),
+      },
     ]
+  },
+  {
+    path: '**',
+    component: PageNotEntreringComponent
   }
 ];
 
