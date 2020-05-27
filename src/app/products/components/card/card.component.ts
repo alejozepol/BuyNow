@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { OrderService } from 'src/app/core/services/order.service';
-import { Order } from 'src/app/core/models/order.model';
+
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
+
+import { OrderService } from '@core/services/order.service';
+import { Order } from '@core/models/order.model';
 
 @Component({
   selector: 'app-card',

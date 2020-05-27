@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Routes } from '../../models/routes.model';
-import { OrderService } from 'src/app/core/services/order.service';
+
+import { Routes } from '@core/models/routes.model';
+import { OrderService } from '@core/services/order.service';
 
 @Component({
   selector: 'app-header',

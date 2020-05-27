@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 /* Modules */
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from '@material/material.module';
 
 /* Components */
 import { HeaderComponent } from './components/header/header.component';

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { Product } from '../../../core/models/product.model';
-import { ProductsService } from '../../../core/services/products.service';
+
+import { ProductsService } from '@core/services/products.service';
 
 
 @Component({
